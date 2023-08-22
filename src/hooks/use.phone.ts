@@ -24,6 +24,10 @@ export function usePhone() {
     if (phoneState.phone.length === 9) {
       dispatch(actions.call());
       (event.target as HTMLAnchorElement).classList.add('active');
+      setTimeout(() => {
+        (event.target as HTMLAnchorElement).classList.remove('active');
+        hang();
+      }, 5000);
     }
   };
 
