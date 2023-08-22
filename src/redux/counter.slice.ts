@@ -1,13 +1,15 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 export type PhoneState = {
-  phone: 'string';
+  phone: string;
   call: boolean;
+  info: string;
 };
 
 const initialState = {
   phone: '',
   call: false,
+  info: '',
 };
 
 const phoneSlice = createSlice({
@@ -19,12 +21,19 @@ const phoneSlice = createSlice({
       state.call = false;
     },
     deleteNumber: (state) => {
-      state.phone = '';
+      state.phone = state.phone.slice(0, state.phone.length - 1);
       state.call = false;
     },
-    changeCall: (state) => {
+    call: (state) => {
       state.phone;
-      state.call = !state.call;
+      state.call = true;
+      state.info = 'Calling...';
+    },
+
+    hang: (state) => {
+      state.phone = '';
+      state.call = false;
+      state.info = 'Hanged';
     },
   },
 });

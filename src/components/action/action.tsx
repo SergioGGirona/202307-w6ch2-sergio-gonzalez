@@ -1,11 +1,21 @@
+import { usePhone } from '../../hooks/use.phone';
+
 export function Action() {
+  const { hang, call } = usePhone();
+
   return (
     <>
-      <a href="#" className="call">
+      <a
+        onClick={(event) => {
+          call(event);
+        }}
+        href="#"
+        className="call"
+      >
         Call
       </a>
 
-      <a href="#" className="hang active">
+      <a onClick={hang} href="#" className="hang active">
         Hang
       </a>
     </>

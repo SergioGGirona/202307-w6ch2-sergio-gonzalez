@@ -1,4 +1,4 @@
-import { Actions } from '../actions/action';
+import { Actions } from '../actions/actions';
 import { Keyboard } from '../keyboard/keyboard';
 
 export function Phone() {
