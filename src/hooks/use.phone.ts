@@ -23,10 +23,13 @@ export function usePhone() {
   const call = (event: SyntheticEvent) => {
     if (phoneState.phone.length === 9) {
       dispatch(actions.call());
+      (event.target as HTMLAnchorElement).classList.add('off');
+
       (event.target as HTMLAnchorElement).classList.add('active');
       setTimeout(() => {
         (event.target as HTMLAnchorElement).classList.remove('active');
         hang();
+        (event.target as HTMLAnchorElement).classList.remove('off');
       }, 5000);
     }
   };
