@@ -1,15 +1,15 @@
 import { usePhone } from '../../hooks/use.phone';
 
 type Props = {
-  children: string;
+  n: string;
 };
-export function Key({ children }: Props) {
+export function Key({ n }: Props) {
   const { add } = usePhone();
 
   return (
     <li>
-      <button onClick={() => add(children)} className="key">
-        {children}
+      <button onClick={() => add(n)} className="key">
+        {n}
       </button>
     </li>
   );

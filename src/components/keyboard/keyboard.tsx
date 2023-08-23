@@ -10,7 +10,7 @@ export const Keyboard = () => {
     <div className="keyboard-container">
       <ol className="keyboard">
         {numbers.map((number) => (
-          <Key key={number}>{number}</Key>
+          <Key key={number} n={number}></Key>
         ))}
         <li>
           <button onClick={() => erase()} className="key big">

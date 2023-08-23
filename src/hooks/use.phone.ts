@@ -7,9 +7,9 @@ export function usePhone() {
   const phoneState = useSelector((state: RootState) => state.phone);
   const dispatch = useDispatch<AppDispatch>();
 
-  const add = (number: string) => {
+  const add = (value: string) => {
     if (phoneState.phone.length < 9) {
-      dispatch(actions.addNumber(number));
+      dispatch(actions.addNumber(value));
     }
   };
 
