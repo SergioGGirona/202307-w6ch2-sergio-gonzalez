@@ -1,7 +1,5 @@
-# Week 6 - Challenge 1
-
-## Teléfono React + Redux.
-Condiciones de la app: 
+## Teléfono React + Redux.
+Condiciones de la página: 
 - Se debe poder escribir un número de teléfono clicando en los botones numéricos. 
 - La tecla borrar puede borrar el último dígito o borrar el número completo, como prefieras.
 - Sólo se verá o el botón Llamar o el botón Colgar, nunca los dos a la vez.
